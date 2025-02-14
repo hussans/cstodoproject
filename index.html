@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title> TODO </title>
+</head>
+<body>
+
+    <form id="taskForm">
+        <div class="input-group full-width">
+            <label> Task Name: </label>
+            <input type="text" id="taskName" required>
+        </div>
+        <div class="input-group full-width">
+            <label> Description: </label>
+            <textarea id="taskDescription"></textarea>
+        </div>
+        <div class="input-group">
+            <label> Status: </label>
+            <select id="taskStatus">
+                <option value="ToDo"> To Do </option>
+                <option value="InProgress"> In Progress </option>
+                <option value="Complete"> Complete </option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label> Priority: </label>
+            <select id="taskPriority">
+                <option value="Low"> Low </option>
+                <option value="Medium"> Medium </option>
+                <option value="High"> High </option>
+            </select>
+        </div>
+        <div class="input-group dateInput">
+            <label> Due Date: </label>
+            <input type="date" id="taskDueDate" required>
+        </div>
+        <button type="submit"> Add Task </button>
+    </form>
+
+    <div class="task-section" id="todo-tasks">
+        <h2> To Do </h2>
+    </div>
+    <div class="task-section" id="inprogress-tasks">
+        <h2> In Progress </h2>
+    </div>
+    <div class="task-section" id="complete-tasks">
+        <h2> Complete </h2>
+    </div>
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script type="module" src="./scripts/storage.js"></script>
+</body>
+</html>
